@@ -1,0 +1,11 @@
+Crypto Coin Name	Coin Price ($)
+Bitcoin (BTC)	$68,483.30
+Ethereum (ETH)	$3,856.00
+Tether (USDT)	$0.9991
+BNB (BNB)	$602.15
+Solana (SOL)	$168.95
+USDC (USDC)	$1.00
+XRP (XRP)	$0.5292
+Dogecoin (DOGE)	$0.1659
+Toncoin (TON)	$6.48
+Cardano (ADA)	$0.4577
