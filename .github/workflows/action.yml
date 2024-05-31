@@ -43,7 +43,7 @@ jobs:
         env:
           AZURE_SECRET_TOKEN: ${{secrets.AZURE_SECRET_TOKEN}}
         
-        run: python .github/workflows/crypto_scrape.ipynb
+        run: python data/crypto_scrape.ipynb
         
         
         
