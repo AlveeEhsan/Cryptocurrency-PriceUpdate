@@ -4,8 +4,8 @@ name: price update
 
 # Controls when the workflow will run
 on:
-  schedule:
-    - cron: "0 */2 * * *" #every 2 hours
+  # schedule:
+  #   - cron: "0 */2 * * *" #every 2 hours
   
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
