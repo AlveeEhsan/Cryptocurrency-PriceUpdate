@@ -49,18 +49,16 @@ jobs:
         run: jupyter execute crypto_scrape.ipynb
         shell: bash
 
-      # - name: commit files
-      #   run: |
-      #     git config --local user.email "action@github.com"
-      #     git config --local user.name "GitHub Action"
-      #     git add data.txt
-      #     git add *.csv
-      #     git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
+      # Add data.txt and pricedata.csv file 
+
+      - name: commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add *
+          git commit -am "ACTIONS UPDATE ${date}"
+          git push origin master
           
-      # - name: push changes
-      #   uses: ad-m/github-push-action@v0.6.0
-      #   branch: master
-        # with:
-          # github_token: 
-        #   branch: master 
-     
+        env:
+          REPO_KEY: ${{secrets.GITHUB_TOKEN}}
+          username: github-actions
