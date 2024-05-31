@@ -60,5 +60,5 @@ jobs:
           git push origin master
           
         env:
-          REPO_KEY: ${{secrets.GITHUB_TOKEN}}
+          REPO_KEY: ${{secrets.SECRET_TOKEN}}
           username: github-actions
