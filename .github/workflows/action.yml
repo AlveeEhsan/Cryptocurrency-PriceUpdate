@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: price update
+name: CryptoPrice Update
 
 # Controls when the workflow will run
 on:
@@ -25,25 +25,28 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+
       - name: checkout repo content
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         uses: actions/checkout@v4
 
       - name: setup python
+
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
 
       - name: install python packages
+
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run python script
-        env:
-          github_token: ${{secrets.AZURE_SECRET_TOKEN}}
-        
-        run: python crypto_scrape.ipynb
+      # JupyterNOtebook Execution Command
+      - name: Run JupyterNotebook execution script
+       
+        run: jupyter execute crypto_scrape.ipynb
+        shell: bash
 
       - name: commit files
         run: |
